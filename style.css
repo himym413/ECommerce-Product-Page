@@ -480,12 +480,9 @@ main .main-two .article-add .article-add-btn {
 
 /* Footer */
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
   text-align: center;
   font-size: 0.9rem;
+  margin-top: auto;
 }
 
 /* Desktop Design */
