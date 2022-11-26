@@ -582,7 +582,7 @@ svg.plus-btn:hover {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 1439px) {
+@media only screen and (min-width: 1199px) {
   /* Header, Main and Footer Basic */
   header,
   main,
