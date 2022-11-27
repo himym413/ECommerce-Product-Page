@@ -30,6 +30,7 @@ const checkoutBtn = document.querySelector(".checkout-btn");
 const notifNumber = document.querySelector(".number-of-notif");
 
 const openLightbox = () => {
+  if (window.innerWidth < 1199) return;
   lightbox.classList.remove("hide");
   overlay.classList.remove("hide");
 };
@@ -62,17 +63,19 @@ const checkClick = (el) => {
 const switchBigImage = (el, where = "main") => {
   let number = el.dataset.image;
 
-  if (where === "lightbox")
+  if (where === "lightbox") {
     mainImageLightbox.src = `images/image-product-${number}.jpg`;
-
+    return;
+  }
   mainImage.src = `images/image-product-${number}.jpg`;
 };
 
 const removeOverlayForAllImages = (where = "main") => {
-  if (where === "lightbox")
+  if (where === "lightbox") {
     for (let i = 0; i < imageOverlayLightboxAll.length; i++)
       imageOverlayLightboxAll[i].classList.add("hide");
-
+    return;
+  }
   for (let i = 0; i < imageOverlayMainAll.length; i++)
     imageOverlayMainAll[i].classList.add("hide");
 };
@@ -280,6 +283,7 @@ const deleteProduct = () => {
 };
 
 mainImage.addEventListener("click", openLightbox);
+
 closeLightboxBtn.addEventListener("click", closeLightbox);
 overlay.addEventListener("click", closeLightbox);
 
