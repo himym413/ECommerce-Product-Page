@@ -130,17 +130,16 @@ button {
 
 /* Lightbox */
 .lightbox {
-  position: relative;
+  position: fixed;
   top: 56%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  height: 90%;
 }
 
 .lightbox > img {
   position: relative;
-  width: 33rem;
+  width: 40rem;
   border-radius: 14px;
   margin-bottom: 2rem;
 }
